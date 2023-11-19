@@ -1,0 +1,24 @@
+JDBC_HOST: 172.22.96.1:5432
+JDB_DATABASE: ms_idm
+JDBC_USERNAME: postgres
+JDBC_PASSWORD: adira
+
+spring:
+  datasource:
+    # url: jdbc:postgresql://${JDBC_HOST}/${JDBC_DATABASE}
+    url: jdbc:postgresql://172.22.96.1:5432/ms_idm
+    username: postgres
+    password: adira
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+  
+server:
+  port: 9999
